@@ -12,19 +12,27 @@ const rl = readline.createInterface({
 });
 
 // the function that will be called by the unit test below
-const rockPaperScissors = (hand1, hand2) => {
-  if((hand1 === "rock") && (hand2 === "scissors")){
-    return "Hand one Wins!";
+const rockPaperScissors = (aHand1, aHand2) => {
+    let player1 = aHand1.toLowerCase();
+    let player2 = aHand2.toLowerCase();
+    let hand1 = player1.trim();
+    let hand2 = player2.trim();
+  if((hand1 != "rock") && (hand1 != "paper") && (hand1 != "scissors")){
+    return "Please try again, hand1 spelling was incorrect";
+  } else if ((hand2 != "rock") && (hand2 != "paper") && (hand2 != "scissors")){
+    return "Please try again, hand2 spelling was incorrect";
+  } else if((hand1 === "rock") && (hand2 === "scissors")){
+    return "Hand one wins!";
   } else if ((hand1 === "paper") && (hand2 === "rock")){
-    return "Hand one Wins!";
+    return "Hand one wins!";
   } else if ((hand1 === "scissors") && (hand2 === "paper")){
-    return "Hand one Wins1";
+    return "Hand one wins!";
   } else if ((hand2 === "rock") && (hand1 === "scissors")){
-    return "Hand two Wins!";
+    return "Hand two wins!";
   } else if ((hand2 === "paper") && (hand1 === "rock")){
-    return "Hand two Wins!";
+    return "Hand two wins!";
   } else if ((hand2 === "scissors") && (hand1 === "paper")){
-    return "Hand two Wins!";
+    return "Hand two wins!";
   } else if (hand1 === hand2){
     return "It's a tie!";
   } 
