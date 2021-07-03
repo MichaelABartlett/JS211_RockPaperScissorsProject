@@ -13,10 +13,12 @@ const rl = readline.createInterface({
 
 // the function that will be called by the unit test below
 const rockPaperScissors = (aHand1, aHand2) => {
-    let player1 = aHand1.toLowerCase();
-    let player2 = aHand2.toLowerCase();
-    let hand1 = player1.trim();
-    let hand2 = player2.trim();
+      let hand1 = aHand1.toLowerCase().trim();
+      let hand2 = aHand2.toLowerCase().trim();
+    // let player1 = aHand1.toLowerCase();
+    // let player2 = aHand2.toLowerCase();
+    // let hand1 = player1.trim();
+    // let hand2 = player2.trim();
   if((hand1 != "rock") && (hand1 != "paper") && (hand1 != "scissors")){
     return "Please try again, hand1 spelling was incorrect";
   } else if ((hand2 != "rock") && (hand2 != "paper") && (hand2 != "scissors")){
